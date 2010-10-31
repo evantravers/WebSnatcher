@@ -1,0 +1,1 @@
+	While analyzing the requirements as given by Professor Warner, we quickly established some key use cases. Dr. Warner would be using this to save caches of websites that were about to disappear. The user should be able to give the program a simple URL, and receive a minimized copy of the whole site. 

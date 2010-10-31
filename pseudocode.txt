@@ -1,0 +1,23 @@
+Run
+	check format of input
+	
+	run spider
+		index
+			add to global catalog
+		goes thru, finds all components
+			if component
+				send to hasher
+					hash, puts in BDTree, returns file path
+			if link
+				check to see if visited and inside current domain
+					adds to Todo Stack
+		do next on Todo
+		
+		
+Spider
+	Todo
+	Visited
+	
+BDTree
+	check
+	add

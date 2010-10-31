@@ -1,0 +1,37 @@
+Title: Webpage Localizer Requirements Doc
+
+Date: 10/29/10
+Version 1.0
+Document Owner: Adam Rhodes, adrhodes@uab.edu
+
+Revision History:
+   Version	     Date	     Author		    Comments
+   -------         -------          --------                --------
+   1.0             10/29/10         Adam Rhodes             Initial rev
+
+
+Synopsis: These are the requirements for version 1 of the Webpage Localizer:
+
+
+
+-
+
+
+
+I. Non-Functional Requirements
+
+-Save all components of the webpage as localized copies
+-Reference localized copies in the local copy of the html source
+-Use md5 hashing to recognize when a file has already been saved.
+-Store files in a directory tree based off the md5 hash. 
+-Reuse already saved copies via local pointers
+-Has to run in a Unix environment
+-Has to run in a reasonable amount of time
+
+
+
+II. Functional Requirements 
+
+-Fetch every component of a webpage given a url
+-Create a directory to store the hmtl files of the website.
+
