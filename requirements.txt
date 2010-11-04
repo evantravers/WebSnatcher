@@ -14,11 +14,27 @@ Synopsis: These are the requirements for version 1 of the Webpage Localizer:
 
 
 
--
-
-
 
 I. Non-Functional Requirements
+
+NF-1 The program must run on a unix console.
+
+NF-2 The program can generate a tree of directories for storing the MD5
+hashes of each component of the given webpage. 
+
+NF-3 The program must make good use of object-oriented methods.
+
+NF-4 Terminal Component Format
+
+NF-4-1 All components of the specified webpage must be saved as localized copies.
+
+NF-4-2 The name of each local copy will be its MD5 hash. 
+
+NF-4-3 Each copy will be stored in a directory tree which is organized by the first hexadecimal values of the MD5 hashes the directories contain.
+ 
+NF-5 The program must run in a reasonable amount of time. 
+
+NF-6 A pointer to each localized copy should replace its original pointer within the html file(s).
 
 -Save all components of the webpage as localized copies
 -Reference localized copies in the local copy of the html source
@@ -28,9 +44,13 @@ I. Non-Functional Requirements
 -Has to run in a Unix environment
 -Has to run in a reasonable amount of time
 
+NF-7 Create a directory at the top of the hash directory tree to store a webpage's html file(s) given a URL.
 
+NF-8 The program should fetch every componenet of the specified webpage. 
 
 II. Functional Requirements 
+
+F-1 The program should accept a URL as input. 
 
 -Fetch every component of a webpage given a url
 -Create a directory to store the hmtl files of the website.

@@ -11,16 +11,21 @@ public class Spider {
 	}
 	
 	private void get(String location) throws Exception {
+		// TODO detect whether this is a page or a component
 		URL u;
 		InputStream is = null;
 		BufferedReader dis;
 		String s;
+		Scanner scan;
 		u = new URL(location);
 		is = u.openStream();
 		dis = new BufferedReader(new InputStreamReader(is));
-		while ((s = dis.readLine()) != null) {
-			s = evaluate(s);
-		}
+		scan = new Scanner(is);
+
+		// while ((s = dis.readLine()) != null) {
+		// 			scan = new Scanner(s);
+		// 			s = evaluate(s);
+		// 		}
 		is.close();
 	}
 	
