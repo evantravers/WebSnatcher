@@ -1,1 +1,35 @@
 	While analyzing the requirements as given by Professor Warner, we quickly established some key use cases. Dr. Warner would be using this to save caches of websites that were about to disappear. The user should be able to give the program a simple URL, and receive a minimized copy of the whole site. The functional requirements are fairly simple. The user provides a URL to a command line program, and the program adds the website to a tree structure which optimizes file size by detecting components whose MD5 hashes are identical, and pointing to the existing stored copy instead of downloading a duplicate.
+	
+	Some of the things we realized we will need to handle based on domain experience and the non-functional requirements are:
+	1) a user putting in as input a badly formatted URL
+	2) the spider encountering very large files (pdfs, movies)
+	3) the spider encountering varied types of filenames that contain html, but have odd extensions (html, htm, php, asp, jp, py, etc.)
+	4) the spider encountering loops with incrementing links, (i.e. months on a calendar page will continue back towards 1976, etc.)
+	
+	1) and 2) are fairly simple to handle, but 3) and 4) become more interesting as the program as run on more websites. A simple (but not comprehensive) fix for 3) is to use Java's built in guessContentTypeFromStream, and we will simply restrict the number of levels the spider can go down for 4), perhaps offering that as a user input for a later version. 
+
+Basic Pseudocode v.01:
+Run
+	check format of input
+	
+	run spider
+		index
+			add to global catalog
+		goes thru, finds all components
+			if component
+				send to hasher
+					hash, puts in BDTree, returns file path
+			if link
+				check to see if visited and inside current domain
+					adds to Todo Stack
+			replaces current url with new url, continues
+		do next on Todo
+		
+		
+Spider
+	Todo
+	Visited
+	
+BDTree
+	check
+	add

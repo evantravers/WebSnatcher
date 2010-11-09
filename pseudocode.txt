@@ -11,6 +11,7 @@ Run
 			if link
 				check to see if visited and inside current domain
 					adds to Todo Stack
+			replaces current url with new url, continues
 		do next on Todo
 		
 		

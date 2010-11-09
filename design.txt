@@ -1,0 +1,54 @@
+	Our design is a simple command line program, intended to be run on Dr. Warner’s server. As such, we aim to make using the software as lightweight and fast as possible. There will be only one input value to start with, (target URL,) but we may choose to add input options for levels of recursion, allowing outside links, etc. 
+	
+	| ======================  TERMINAL ================================================= |
+	| Evan-Traverss-MacBook-Pro:WebSnatcher evan$ java WebSnatcher http://www.google.com |
+	| ================================================================================== |
+	
+	Following our motto of KISS for this project, we are keeping the class structure as simple as possible, only using three classes. This should cover all the issues/structures we need to address in the code. The classes will be the following:
+	
+	[UML of the class structure]
+	
+	As we were working on the folder tree structure for the hash, we experimented to optimize the proper depth. We went with an initial guess of six, but then we realized that brought about a ridiculous number of folders, (11 million, 390 thousand and 625, to be exact.) After some experimentation, we settled on four levels for now, but we may decrease it to three eventually. 
+	
+	Folder Structure:
+	
+	1
+	 \
+		1
+		2
+		3
+		4
+		5
+		7
+		8
+		9
+		0
+		etc...
+	2
+	 \..
+	3
+	 \..
+	4
+	 \..
+	5
+	 \..
+	6
+	 \..
+	7
+	 \..
+	8
+	 \..
+	9
+	 \..
+	A
+	 \..
+	B
+	 \..
+	C
+	 \..
+	D
+	 \..
+	E
+	 \..
+	F
+	 \..
